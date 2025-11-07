@@ -16,11 +16,11 @@ The code reconstructs complex block-sparse signals with **unknown block borders*
 ### Algorithms
 - **CorSBL (proposed)**: `MSBL_correlated.m`  
   Correlation-aware SBL with a **tridiagonal** coefficient covariance (neighbor coupling).
-- **PCSBL and CSBL** (pattern-coupled): `MPCSBL.m`, `MPCSBL_alternative.m`, 
+- **SBL, PCSBL and CSBL** (pattern-coupled): `MPCSBL.m` (SBL and PCSBL), `MPCSBL_alternative.m`(CSBL), 
 - **BSBL (block SBL)**: `BSBL_EM.m`, `BSBL_FM.m` (evaluated with **h = 2** and **h = 4**)
 - **EBSBL (extended BSBL)**: `EBSBL_BO.m` (evaluated with **h = 2** and **h = 4**)
 
-> Throughout the repository, CorSBL is compared to **BSBL(h=2)**, **BSBL(h=4)**, **EBSBL(h=2)**, **EBSBL(h=4)**, **PCSBL**, and **CSBL**.
+> Throughout the repository, CorSBL is compared to **BSBL(h=2)**, **BSBL(h=4)**, **EBSBL(h=2)**, **EBSBL(h=4)**, **SBL**, **PCSBL**, and **CSBL**.
 
 ---
 
@@ -48,7 +48,7 @@ The code reconstructs complex block-sparse signals with **unknown block borders*
 ## Notes
 
 - BSBL/EBSBL runs are explicitly evaluated with **block lengths h = 2** and **h = 4**, matching the paper’s comparisons.
-- PCSBL/CSBL implementations use pattern-coupling / correlation modeling without fixing block borders.
+- PCSBL/CSBL implementations use pattern-coupling  modeling without fixing block borders.
 - CorSBL employs **neighbor-coupled hyperparameters** via a **tridiagonal** prior; updates are derived to keep computation efficient.
 
 ---
